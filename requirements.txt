@@ -1,0 +1,10 @@
+Flask
+vaderSentiment
+scikit-learn
+tensorflow
+tensorlayer
+numpy
+click
+tqdm
+nltk
+pytest

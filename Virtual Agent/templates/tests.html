@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.css">
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper fullHeight">
+        <div id="nav"></div>
+
+        <div class="popup text-success" >
+            <div class="spinner-grow" role="status">
+            <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+
+        <div class="absoluteButtons">
+            <div class="backArrow" style="display: none;">
+                <p>Return - Chat With New Virtual Agent</p>
+            </div>
+        </div>
+
+
+        <div class="row chatCategories" style="display: none;">
+            <div class="col-sm-4 col-12 fullHeight">
+            <div class="fullHeight chatPersonality defaultBorder" id="normalChatbot">
+                <img src="../static/test2.gif" alt="chatbot">
+                <p>Virtual Agent 1</p>
+            </div>
+            </div>
+            <div class="col-sm-4 col-12 fullHeight">
+            <div class="fullHeight chatPersonality defaultBorder" id="sentimentChatbot">
+                <img src="../static/test2.gif" alt="chatbot">
+                <p>Virtual Agent 2</p>
+            </div>
+            </div>
+            <div class="col-sm-4 col-12 fullHeight">
+            <div class="fullHeight chatPersonality defaultBorder" id="emotionChatbot">
+                <img src="../static/test2.gif" alt="chatbot">
+                <p>Virtual Agent 3</p>
+            </div>
+            </div>
+        </div>
+        <div class="col-12 chatBackground defaultBorder fullHeight" style="display: none;">
+            <div class="row fullHeight">
+            <div class="col-sm-4 col-12 videoColumn">
+                <div class="row fullHeight">
+                <div class="col-sm-12 col-6">
+                    <div class="videoChat" id="affdex_elements"></div> <!--Users Webcam-->
+                </div>
+                <div class="col-sm-12 col-6">
+                    <div class="videoChat"><img class="videoChatSize" src="static/test2.gif" alt="chatbot icon"></div>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-8 col-12 chatColumn">
+                <div class="col-12 conversationSection defaultBorder fullHeight">
+                    <div class="chat">
+
+                    </div>
+                    <div class="message">
+                    <div class="input-group messageContainer">
+                        <input type="text" class="form-control messageBox" placeholder="Type a message..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                        <div class="input-group-append">
+                        <span class="input-group-text sendMessage"><i class="fas fa-paper-plane"></i></span>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+
+<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+<script src="https://download.affectiva.com/js/3.2.1/affdex.js"></script>
+<script src="static/script.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/jasmine-html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jasmine/3.5.0/boot.js"></script>
+<script src="static/tests.js" defer></script>
+</html>

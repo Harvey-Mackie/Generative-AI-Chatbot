@@ -1,0 +1,15 @@
+.DS_Store
+*/__pycache__/*
+*/__pycache__
+__pycache__/
+
+
+*/model
+
+static/badwords.txt
+static/modelResults.txt
+
+*.npy
+*.pkl 
+chat.txt
+

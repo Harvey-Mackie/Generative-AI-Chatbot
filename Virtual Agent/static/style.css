@@ -1,0 +1,271 @@
+*{font-size: 14px;}
+html{height: 100%;}
+body{ background: #141D26; color: #fff; font-family: 'Open Sans', Arial, sans-serif;font-size: 10px;height: 100%;}
+.wrapper { max-width: 1180px;margin: 0px auto;padding: 0;}
+.popup {position: fixed;top: 50%;left: 50%;-webkit-transform: translate(-50%, -50%);transform: translate(-50%, -50%);}
+.chatBackground{background-color: #EEEEEE;}
+.conversationSection{background-color: #fff; height: 100%;}
+.defaultBorder{padding: 1.5em; border-radius: 15px;}
+#face_video{width:100%;height: 50%;/*padding: 0.5em;*/ border-radius: 15px;}
+.videoChat{ border-radius: 15px;max-width:100%;min-height:100%; max-height: 100%;position: relative;}
+.videoChatSize{width: 100%;/*height: 100%;padding: 0.5em;*/ border-radius: 15px;position: absolute; bottom: 0;}
+
+.videoColumn{height: 100%;}
+.chatColumn{height: 100%;}
+
+@media(min-width: 577px){
+    .videoChatSize{
+        position: absolute;
+    }
+}
+@media (max-width: 576px) {
+    .videoColumn {
+        height: 25%;
+    }
+    .chatColumn {
+        height: 75%;
+    }
+    .videoChatSize{
+        position: relative;
+    }
+}
+
+.chat{height:90%;overflow: auto;overflow-x: hidden;}
+.message{height:10%; position: relative;}
+.messageContainer{position: absolute; bottom: 0;}
+.message input{width: 100%; border-radius: 15px;}
+.sendMessage{cursor: pointer;border-radius: 0 15px 15px 0;}
+.fullHeight{height: 100%;}
+
+#nav{min-height: 12em;}
+#footer{height: 10em;}
+
+
+
+
+.chatPersonality{
+  background-color: #E5E6EB;
+  cursor: pointer;
+}
+.chatPersonality img{
+  max-height: 100%;
+  max-width: 100%;
+}
+.chatPersonality p{
+  color: #141D26;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+
+
+.chatPersonality:hover
+{
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+  box-shadow: 2px 2px rgb(30, 41, 51);
+  background-color:rgb(186, 243, 197);
+}
+
+
+.absoluteButtons{
+  position: fixed;
+  z-index: 2;
+  right: 0;
+  top: 5%;
+}
+
+.backArrow{
+  cursor: pointer;
+  background-color: #FF6961;
+  opacity: 0.6;
+  border-radius: 15px;
+  padding: 0.7em;
+}
+.backArrow p{
+  margin: 0;
+  padding: 0;
+}
+.backArrow:hover{
+  opacity: 1;
+}
+
+
+
+/* Scroll Bar */
+::-webkit-scrollbar-thumb {
+  background: #141D26; 
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #141D26; 
+}
+/* width */
+.chat::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+.chat::-webkit-scrollbar-track {
+  /* box-shadow: inset 0 0 5px grey;  */
+  border-radius: 15px;
+}
+ 
+/* Handle */
+.chat::-webkit-scrollbar-thumb {
+  background: #E5E6EB; 
+  border-radius: 15px;
+}
+
+/* Handle on hover */
+.chat::-webkit-scrollbar-thumb:hover {
+  background: rgba(229, 230, 235, 0.87); 
+}
+
+/* https://codepen.io/swards/pen/gxQmbj - Messsages CSS Source */
+/* Messages */
+.textMessages {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.textMessage {
+    border-radius: 20px;
+    padding: 8px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.yours {
+    align-items: flex-start;
+  }
+  
+  .yours .textMessage {
+    margin-right: 25%;
+    background-color: #eee;
+    position: relative;
+    color: black;
+  }
+  
+  .yours .textMessage.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: -7px;
+    height: 20px;
+    width: 20px;
+    background: #eee;
+    border-bottom-right-radius: 15px;
+  }
+  .yours .textMessage.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    left: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-right-radius: 10px;
+  }
+  
+  .mine {
+    align-items: flex-end;
+  }
+  
+  .mine .textMessage {
+    color: white;
+    margin-left: 25%;
+    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+  
+  .mine .textMessage.last:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    right: -7px;
+    height: 20px;
+    width: 20px;
+    background: linear-gradient(to bottom, #00D0EA 0%, #0085D1 100%);
+    background-attachment: fixed;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .mine .textMessage.last:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    bottom: 0;
+    right: -10px;
+    width: 10px;
+    height: 20px;
+    background: white;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .jasmine_html-reporter{
+    margin-bottom: 10px;
+  }
+
+
+  /* Affectiva Test Page */
+  .testHeading, .testHeading span.emotion{
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+  }
+  .overlay{
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+    z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  }
+
+  .modalForm{
+    background-color: white;
+    width: 30%;
+    height: 40%;
+    margin-left: 33.333%;
+    margin-top: 10%;
+    padding: 5%;
+  }
+  .modalForm label{
+    font-weight: bold;
+  }
+  .modalForm label, .modalForm input, .modalForm button{
+    font-size: 1.5em;
+    color: black;
+    text-align: center;
+    margin: 1%;
+  }
+  .modalForm button{
+    color: white;
+  }
+  .largeText{
+    font-size: 3em;
+  }
+  table, th, td {
+    border: 1px solid black;
+    color: black;
+    font-size: 2em;
+    padding: 1%;
+  }
+  table.emotionResults, table.emotionResults tbody, table.emotionResults tbody tr{
+    width: 100%;
+  }
